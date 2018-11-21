@@ -12,9 +12,9 @@ export class PostDetailsComponent implements OnInit {
   title = 'app';
   posts: any = [];
 
-  constructor(private ps:PostService) { }
+  constructor(private ps: PostService) { }
 
-  ngOnInit(){
+  ngOnInit() {
     console.log("work");
     this.ps.getPostsData().subscribe(data => {
       this.posts = data.posts;
